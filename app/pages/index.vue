@@ -1,7 +1,19 @@
 <template>
-  <section class="flex min-h-[60vh] items-center justify-center bg-gray-50">
-    <div class="text-center">
-      <h1 class="text-4xl font-bold text-gray-900">Hallo Yus & Arma</h1>
-    </div>
-  </section>
+  <div>
+
+    <section class="min-h-screen px-6 py-20">
+      <div class="mx-auto max-w-7xl">
+
+        <h1 class="text-4xl font-bold">
+          Explore Dalat
+        </h1>
+
+        <p class="mt-4 text-gray-600">
+          4 Days 3 Nights Travel Experience
+        </p>
+
+      </div>
+    </section>
+
+  </div>
 </template>
