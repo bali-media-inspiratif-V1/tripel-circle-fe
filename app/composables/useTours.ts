@@ -1,11 +1,42 @@
+export interface ItineraryDay {
+  day: number
+  title: string
+  meals: string
+  activities: string[]
+}
+
+export interface HotelPrice {
+  stars: number
+  hotelName: string
+  price: number
+}
+
+export interface ChildPolicyItem {
+  category: string
+  rate: string
+}
+
+export interface TourPackage {
+  id: string
+  title: string
+  subtitle: string
+  duration: string
+  minPax: string
+  highlights: string[]
+  prices: HotelPrice[]
+  includes: string[]
+  excludes: string[]
+  childPolicy: ChildPolicyItem[]
+  itinerary: ItineraryDay[]
+}
+
 export const useTours = () => {
-  const tourPackage = {
+  const tourPackage: TourPackage = {
     id: 'dalat-4d3n',
     title: 'Jelajahi Da Lat — 4 Hari 3 Malam',
     subtitle: 'Udara pegunungan yang sejuk, taman penuh warna, destinasi unik, dan pengalaman berkesan.',
     duration: '4 Hari 3 Malam',
     minPax: '8–10 Peserta',
-    validUntil: '15 Agustus 2026',
     highlights: [
       'Da Lat Flower Park & Mongoland (Dry Grass Tubing Slide)',
       'Fresh Garden & Suasana Jepang di Hoang Long Ohayo',
@@ -32,17 +63,23 @@ export const useTours = () => {
       'Biaya visa, asuransi perjalanan, dan pengeluaran pribadi',
       'Layanan lain yang tidak tercantum dalam program'
     ],
+    childPolicy: [
+      { category: 'Bayi (< 2 Tahun)', rate: 'Gratis (Free)' },
+      { category: 'Anak 2–6 Tahun', rate: '50% tarif dewasa (sharing bed)' },
+      { category: 'Anak > 6 s/d < 10 Tahun', rate: '75% tarif dewasa (sharing bed)' },
+      { category: 'Anak > 10 Thn / Extra Bed', rate: '100% tarif dewasa' }
+    ],
     itinerary: [
       {
         day: 1,
         title: 'Kedatangan — Taman Bunga Da Lat — Pasar Malam',
         meals: 'Makan Siang & Makan Malam',
         activities: [
-          'Penjemputan di Bandara Lien Khuong oleh pemandu wisata dan transfer ke pusat kota.',
+          'Pemandu wisata menyambut rombongan di Bandara Lien Khuong dan transfer ke pusat kota.',
           'Makan siang di restoran lokal dan istirahat sejenak.',
           'Mengunjungi Taman Bunga Da Lat yang dipenuhi ribuan bunga warna-warni.',
-          'Check-in hotel dan istirahat.',
-          'Makan malam lokal dan waktu bebas menjelajahi Da Lat Night Market.'
+          'Transfer ke hotel untuk proses check-in dan istirahat.',
+          'Makan malam di restoran lokal dilanjutkan waktu bebas di Da Lat Night Market.'
         ]
       },
       {
@@ -66,7 +103,7 @@ export const useTours = () => {
           'Makan siang di restoran lokal.',
           'Mengunjungi keunikan arsitektur surealis Crazy House (Hang Nga Villa).',
           'Kunjungan ke High-Tech Strawberry Farm dan tester 1 buah stroberi gratis.',
-          'Makan malam hidangan khas Vietnam dan waktu bebas di Night Market.'
+          'Makan malam hidangan khas Vietnam dan waktu santai kedua di Da Lat Night Market.'
         ]
       },
       {
@@ -75,13 +112,11 @@ export const useTours = () => {
         meals: 'Sarapan',
         activities: [
           'Sarapan di hotel dan proses check-out.',
-          'Transfer ke Bandara Internasional Lien Khuong untuk penerbangan kepulangan.'
+          'Pemandu wisata mengantar rombongan menuju Bandara Internasional Lien Khuong untuk penerbangan kembali.'
         ]
       }
     ]
   }
 
-  return {
-    tourPackage
-  }
+  return { tourPackage }
 }
