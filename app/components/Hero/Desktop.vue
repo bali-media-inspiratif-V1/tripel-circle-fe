@@ -1,15 +1,20 @@
 <script setup lang="ts">
 import type { TourPackage } from '~/composables/useTours'
 
+interface StatItem {
+  value: string
+  label: string
+}
+
 defineProps<{
   tourPackage: TourPackage
-  stats: { value: string; label: string }[]
+  stats: StatItem[]
 }>()
 </script>
 
 <template>
   <div class="hidden lg:grid mx-auto w-full max-w-7xl grid-cols-[1.1fr_0.9fr] items-center gap-10 px-8 py-20 font-sans">
-    <!-- Sisi Kiri -->
+    <!-- Kolom Kiri: Teks & Aksi -->
     <div class="max-w-xl text-left">
       <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-widest text-white backdrop-blur shadow-xl">
         <span class="h-2 w-2 rounded-full bg-emerald-400 animate-ping"></span>
@@ -42,7 +47,7 @@ defineProps<{
         </a>
       </div>
 
-      <!-- Stats Bar Asli -->
+      <!-- Stats Bar Desktop -->
       <div class="mt-10 grid grid-cols-3 divide-x divide-white/20 border-y border-white/20 py-4">
         <div v-for="stat in stats" :key="stat.label" class="px-4 first:pl-0">
           <p class="text-2xl font-black text-white tracking-tight">{{ stat.value }}</p>
@@ -51,7 +56,7 @@ defineProps<{
       </div>
     </div>
 
-    <!-- Sisi Kanan: Showcase Card -->
+    <!-- Kolom Kanan: Card Showcase -->
     <div class="relative flex items-center justify-center min-h-[380px]">
       <div class="relative h-84 w-full max-w-sm rotate-2 overflow-hidden rounded-3xl border border-white/20 bg-white/10 shadow-2xl">
         <img 
