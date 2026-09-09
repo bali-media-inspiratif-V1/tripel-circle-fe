@@ -15,6 +15,7 @@ const stats = [
 </script>
 
 <template>
+
   <section class="relative isolate overflow-hidden bg-gradient-to-b from-[#1b1513] via-[#241c19] to-[#2c221e] text-white">
     <!-- Desktop View (Layar >= 1024px) -->
     <DesktopHero :tour-package="tourPackage" :stats="stats" />

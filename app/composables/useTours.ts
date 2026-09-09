@@ -13,6 +13,7 @@ export interface HotelPrice {
 
 export interface ChildPolicyItem {
   category: string
+  condition: string
   rate: string
 }
 
@@ -21,7 +22,8 @@ export interface TourPackage {
   title: string
   subtitle: string
   duration: string
-  minPax: string
+  paxNote: string
+  pricingNote: string
   highlights: string[]
   prices: HotelPrice[]
   includes: string[]
@@ -34,76 +36,110 @@ export const useTours = () => {
   const tourPackage: TourPackage = {
     id: 'dalat-4d3n',
     title: 'Jelajahi Da Lat — 4 Hari 3 Malam',
-    subtitle: 'Udara pegunungan yang sejuk, taman penuh warna, destinasi unik, dan pengalaman berkesan.',
+    subtitle: 'Udara pegunungan yang sejuk, taman penuh warna, destinasi unik, dan pengalaman berkesan dalam satu perjalanan.',
     duration: '4 Hari 3 Malam',
-    minPax: '8–10 Peserta',
+    paxNote: 'Berdasarkan 8–10 Peserta',
+    pricingNote: 'Estimasi harga berdasarkan proposal penawaran (berlaku hingga 15 Agustus 2026). Harga final dan ketersediaan dikonfirmasi ulang sebelum reservasi.',
     highlights: [
-      'Da Lat Flower Park & Mongoland (Dry Grass Tubing Slide)',
-      'Fresh Garden & Suasana Jepang di Hoang Long Ohayo',
+      'Da Lat Flower Park',
+      'Mongoland (Dry Grass Tubing Slide & Hobbit House)',
+      'Fresh Garden',
+      'Hoang Long Ohayo (Nuansa Budaya Jepang)',
       'Langbiang Land (Rainbow Slide, Zooland, Strawberry Picking)',
-      'Crazy House & High-Tech Strawberry Farm',
-      'Da Lat Night Market & Outdoor BBQ Dinner'
+      'Crazy House (Hang Nga Villa)',
+      'High-Tech Strawberry Farm'
     ],
     prices: [
-      { stars: 3, hotelName: 'Rum Yang Hotel / Setara', price: 5864000 },
-      { stars: 4, hotelName: 'TTC Hotel / Setara', price: 6985000 }
+      {
+        stars: 3,
+        hotelName: 'Rum Yang Hotel atau Hotel Setara',
+        price: 5864000
+      },
+      {
+        stars: 4,
+        hotelName: 'TTC Hotel atau Hotel Setara',
+        price: 6985000
+      }
     ],
     includes: [
-      'Akomodasi 3 malam di hotel pilihan atau setara',
-      'Transportasi AC (16 kursi wisata & 29 kursi transfer bandara)',
-      'Makan sesuai itinerary + Air mineral 1 botol/orang/hari',
-      'Tiket masuk seluruh objek wisata sesuai itinerary',
+      'Akomodasi selama 3 malam di hotel sesuai kategori pilihan atau setara',
+      'Transportasi: Kendaraan AC 16 kursi untuk tour wisata & 29 kursi untuk transfer bandara',
+      'Makan sesuai yang tercantum dalam itinerary',
+      'Air mineral 1 botol per orang per hari selama perjalanan',
+      'Seluruh tiket masuk objek wisata sesuai itinerary',
       'Gratis 1 minuman per orang di Lời Của Gió Coffee',
       'Pemandu wisata profesional berbahasa Inggris',
-      'Tip wajib pemandu & driver USD 3/orang/hari'
+      'Biaya tip wajib pemandu dan driver sebesar USD 3 per orang per hari'
     ],
     excludes: [
-      'Tiket pesawat internasional & pajak bandara',
-      'Makanan dan minuman di luar program itinerary',
-      'Biaya visa, asuransi perjalanan, dan pengeluaran pribadi',
-      'Layanan lain yang tidak tercantum dalam program'
+      'Tiket pesawat internasional beserta pajak bandara',
+      'Makanan dan minuman yang tidak disebutkan dalam program perjalanan',
+      'Biaya pengurusan visa, asuransi perjalanan, dan pengeluaran pribadi',
+      'Layanan lain yang tidak disebutkan secara jelas dalam program perjalanan'
     ],
     childPolicy: [
-      { category: 'Bayi (< 2 Tahun)', rate: 'Gratis (Free)' },
-      { category: 'Anak 2–6 Tahun', rate: '50% tarif dewasa (sharing bed)' },
-      { category: 'Anak > 6 s/d < 10 Tahun', rate: '75% tarif dewasa (sharing bed)' },
-      { category: 'Anak > 10 Thn / Extra Bed', rate: '100% tarif dewasa' }
+      {
+        category: 'Bayi di bawah 2 tahun',
+        condition: 'Tidak dikenakan biaya',
+        rate: 'Gratis'
+      },
+      {
+        category: 'Anak usia 2 hingga 6 tahun',
+        condition: 'Berbagi tempat tidur dengan orang dewasa',
+        rate: '50% tarif dewasa'
+      },
+      {
+        category: 'Anak usia > 6 hingga < 10 tahun',
+        condition: 'Berbagi tempat tidur dengan orang dewasa',
+        rate: '75% tarif dewasa'
+      },
+      {
+        category: 'Anak usia di atas 10 tahun',
+        condition: 'Dikenakan tarif penuh',
+        rate: '100% tarif dewasa'
+      },
+      {
+        category: 'Extra Bed (Tempat Tidur Tambahan)',
+        condition: 'Anak yang menggunakan tempat tidur tambahan',
+        rate: '100% tarif dewasa'
+      }
     ],
     itinerary: [
       {
         day: 1,
-        title: 'Kedatangan — Taman Bunga Da Lat — Pasar Malam',
+        title: 'Kedatangan — Da Lat Flower Park — Da Lat Night Market',
         meals: 'Makan Siang & Makan Malam',
         activities: [
-          'Pemandu wisata menyambut rombongan di Bandara Lien Khuong dan transfer ke pusat kota.',
+          'Pemandu wisata menjemput rombongan di Bandara Da Lat dan transfer ke pusat kota (jadwal disesuaikan waktu penerbangan).',
           'Makan siang di restoran lokal dan istirahat sejenak.',
-          'Mengunjungi Taman Bunga Da Lat yang dipenuhi ribuan bunga warna-warni.',
-          'Transfer ke hotel untuk proses check-in dan istirahat.',
-          'Makan malam di restoran lokal dilanjutkan waktu bebas di Da Lat Night Market.'
+          'Mengunjungi Taman Bunga Da Lat yang menampilkan ribuan bunga berwarna-warni dan taman tematik.',
+          'Transfer menuju hotel untuk proses check-in dan istirahat.',
+          'Makan malam di restoran lokal dilanjutkan waktu santai di Da Lat Night Market (kuliner pizza Da Lat, susu kedelai hangat, dan jajanan lokal).'
         ]
       },
       {
         day: 2,
-        title: 'Mongoland — Fresh Garden — Hoang Long Ohayo',
+        title: 'Mongoland — Fresh Garden — Hoang Long Ohayo — Outdoor BBQ',
         meals: 'Sarapan, Makan Siang & Makan Malam',
         activities: [
-          'Eksplorasi Mongoland: Spot foto ala Nordik, Hobbit House, dan Dry Grass Tubing Slide.',
-          'Mengunjungi Fresh Garden dengan hamparan taman bunga luas.',
-          'Makan siang di restoran lokal.',
-          'Menikmati suasana Jepang di Hoang Long Ohayo (Gerbang Torii merah, sakura, dan danau tenang).',
-          'Outdoor BBQ Dinner santai dengan pemandangan lampu kota malam hari.'
+          'Sarapan di hotel dan penjemputan oleh pemandu wisata.',
+          'Eksplorasi Mongoland: wahana Dry Grass Tubing Slide, spot foto Hobbit House, Giant Sky Swing, dan taman bunga.',
+          'Mengunjungi Fresh Garden dengan hamparan taman bunga luas dan lanskap artistik.',
+          'Makan siang di restoran lokal dan istirahat sejenak.',
+          'Mengunjungi kawasan bertema budaya Jepang di Hoang Long Ohayo (Gerbang Torii merah, sakura, dan danau tenang).',
+          'Makan malam Outdoor BBQ santai dengan panorama lampu kota Da Lat di malam hari.'
         ]
       },
       {
         day: 3,
-        title: 'Langbiang Land — Crazy House — Kebun Stroberi',
+        title: 'Langbiang Land — Crazy House — High-Tech Strawberry Farm',
         meals: 'Sarapan, Makan Siang & Makan Malam',
         activities: [
-          'Aktivitas di Langbiang Land: Rainbow Slide, Grass Tubing, Zooland, dan Dinosaur Park.',
-          'Makan siang di restoran lokal.',
-          'Mengunjungi keunikan arsitektur surealis Crazy House (Hang Nga Villa).',
-          'Kunjungan ke High-Tech Strawberry Farm dan tester 1 buah stroberi gratis.',
-          'Makan malam hidangan khas Vietnam dan waktu santai kedua di Da Lat Night Market.'
+          'Sarapan di hotel dan menuju Langbiang Land: Rainbow Slide, Grass Tubing Slide, Zooland, Dinosaur Park, serta memetik stroberi musiman.',
+          'Makan siang di restoran lokal dan istirahat sejenak.',
+          'Mengunjungi keunikan arsitektur surealis dunia di Crazy House (Hang Nga Villa).',
+          'Kunjungan ke High-Tech Strawberry Farm: edukasi budidaya stroberi modern, berfoto di greenhouse, dan tester 1 buah stroberi gratis di konter.',
+          'Makan malam di restoran lokal dan waktu bebas kedua di Da Lat Night Market.'
         ]
       },
       {
