@@ -7,7 +7,6 @@
     <div class="grow">
       <slot />
     </div>
-
     <Footer />
   </div>
 </template>

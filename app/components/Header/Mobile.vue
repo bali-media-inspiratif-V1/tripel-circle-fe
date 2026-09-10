@@ -27,7 +27,7 @@ const isMenuOpen = ref(false)
           class="h-7 w-auto object-contain shrink-0"
         />
         <span class="text-base font-black tracking-widest text-[#082f41] truncate">
-          TRIPLE CIRCLE
+          TRIP CIRCLE
         </span>
       </NuxtLink>
       
