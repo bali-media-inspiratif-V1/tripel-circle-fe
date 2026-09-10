@@ -17,22 +17,22 @@ const { tourPackage } = useTours()
     <section class="py-8 bg-white border-b border-[#e7dccd]">
       <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
         <div class="p-3">
-          <div class="text-2xl mb-1">🌿</div>
+          <div class="text-2xl mb-1"></div>
           <h4 class="text-xs font-bold text-[#082f41] uppercase tracking-wider">Udara Pegunungan</h4>
           <p class="text-xs text-[#53666f] mt-0.5">Dataran tinggi sejuk Da Lat</p>
         </div>
         <div class="p-3">
-          <div class="text-2xl mb-1">📸</div>
+          <div class="text-2xl mb-1"></div>
           <h4 class="text-xs font-bold text-[#082f41] uppercase tracking-wider">Destinasi Unik</h4>
           <p class="text-xs text-[#53666f] mt-0.5">Mongoland & Crazy House</p>
         </div>
         <div class="p-3">
-          <div class="text-2xl mb-1">🍲</div>
+          <div class="text-2xl mb-1"></div>
           <h4 class="text-xs font-bold text-[#082f41] uppercase tracking-wider">Kuliner Lokal</h4>
           <p class="text-xs text-[#53666f] mt-0.5">Night Market & Outdoor BBQ</p>
         </div>
         <div class="p-3">
-          <div class="text-2xl mb-1">🗣️</div>
+          <div class="text-2xl mb-1"></div>
           <h4 class="text-xs font-bold text-[#082f41] uppercase tracking-wider">Guide Profesional</h4>
           <p class="text-xs text-[#53666f] mt-0.5">Pemandu Berbahasa Inggris</p>
         </div>
@@ -85,14 +85,14 @@ const { tourPackage } = useTours()
         </p>
       </div>
 
-      <!-- Kotak Disclaimer Masa Berlaku Harga -->
+      <!-- Kotak Disclaimer Masa Berlaku Harga
       <div class="mb-8 p-4 rounded-2xl bg-amber-50/80 border border-amber-200 text-left max-w-2xl mx-auto flex items-start gap-3">
         <span class="text-amber-700 text-base">⚠️</span>
         <div class="text-xs text-amber-950 leading-relaxed">
           <span class="font-bold block mb-0.5">Catatan Penting Harga:</span>
           {{ tourPackage.pricingNote }}
         </div>
-      </div>
+      </div> -->
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
         <div 
@@ -176,7 +176,7 @@ const { tourPackage } = useTours()
       <!-- Child Policy List View: 5 Poin Proporsional & Terbaca Sempurna -->
       <div class="bg-white rounded-3xl p-6 sm:p-8 border border-[#e7dccd] shadow-sm">
         <h4 class="font-bold text-xs uppercase tracking-wider text-[#082f41] mb-4 flex items-center gap-2">
-          <span></span> Kebijakan Anak (Child Policy) Sesuai Ketentuan Proposal
+          <span></span> Kebijakan Anak (Child Policy)
         </h4>
         
         <div class="divide-y divide-[#e7dccd]/70 border border-[#e7dccd] rounded-2xl overflow-hidden text-xs">
