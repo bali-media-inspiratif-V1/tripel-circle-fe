@@ -33,7 +33,7 @@ const navLinks = [
 
           <!-- Teks Brand Sejajar -->
           <span class="text-xl font-black tracking-widest text-white">
-            TRIPLE CIRCLE
+            TRIP CIRCLE
           </span>
         </NuxtLink>
 
