@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@lucide/vue": "^1.43.0",
     "@nuxt/image": "^2.1.0",
     "lucide-vue-next": "^1.0.0",
     "nuxt": "^4.5.2",
