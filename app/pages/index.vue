@@ -1,11 +1,21 @@
 <script setup lang="ts">
 import { useTours } from "~/composables/useTours";
+import { Mountain, Camera, Utensils, Languages } from "@lucide/vue";
 
 definePageMeta({
   layout: "main",
 });
 
 const { tourPackage } = useTours();
+
+const imagesDestination = [
+  "https://images.unsplash.com/photo-1528127269322-539801943592",
+  "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b",
+  "https://images.unsplash.com/photo-1528181304800-259b08848526",
+  "https://images.unsplash.com/photo-1557750255-c76072a7aad1",
+  "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a",
+  "https://images.unsplash.com/photo-1533669955142-6a73332af4db",
+];
 </script>
 
 <template>
@@ -14,84 +24,166 @@ const { tourPackage } = useTours();
     <Hero :tour-package="tourPackage" />
 
     <!-- 2. Value Proposition Faktual -->
-    <section class="py-8 bg-white border-b border-[#e7dccd]">
-      <div
-        class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center"
-      >
-        <div class="p-3">
-          <div class="text-2xl mb-1">🌿</div>
-          <h4 class="text-xs font-bold text-[#082f41] uppercase tracking-wider">
-            Udara Pegunungan
-          </h4>
-          <p class="text-xs text-[#53666f] mt-0.5">
-            Dataran tinggi sejuk Da Lat
-          </p>
-        </div>
-        <div class="p-3">
-          <div class="text-2xl mb-1">📸</div>
-          <h4 class="text-xs font-bold text-[#082f41] uppercase tracking-wider">
-            Destinasi Unik
-          </h4>
-          <p class="text-xs text-[#53666f] mt-0.5">Mongoland & Crazy House</p>
-        </div>
-        <div class="p-3">
-          <div class="text-2xl mb-1">🍲</div>
-          <h4 class="text-xs font-bold text-[#082f41] uppercase tracking-wider">
-            Kuliner Lokal
-          </h4>
-          <p class="text-xs text-[#53666f] mt-0.5">
-            Night Market & Outdoor BBQ
-          </p>
-        </div>
-        <div class="p-3">
-          <div class="text-2xl mb-1">🗣️</div>
-          <h4 class="text-xs font-bold text-[#082f41] uppercase tracking-wider">
-            Guide Profesional
-          </h4>
-          <p class="text-xs text-[#53666f] mt-0.5">Pemandu Berbahasa Inggris</p>
+    <section class="border-y border-[#e7dccd] bg-[#fffdf9] py-10">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+          <div
+            class="group flex flex-col items-center justify-center text-center rounded-2xl border border-[#eee5d9] bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+          >
+            <div
+              class="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#eaf7f4] text-[#0f766e]"
+            >
+              <Mountain class="h-5 w-5" />
+            </div>
+
+            <h4 class="text-sm font-semibold text-[#082f41]">
+              Udara Pegunungan
+            </h4>
+
+            <p class="mt-1 text-xs leading-5 text-[#6b7b83]">
+              Nikmati suasana sejuk dataran tinggi Da Lat.
+            </p>
+          </div>
+
+          <div
+            class="group flex flex-col items-center justify-center text-center rounded-2xl border border-[#eee5d9] bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+          >
+            <div
+              class="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#eaf7f4] text-[#0f766e]"
+            >
+              <Camera class="h-5 w-5" />
+            </div>
+
+            <h4 class="text-sm font-semibold text-[#082f41]">Destinasi Unik</h4>
+
+            <p class="mt-1 text-xs leading-5 text-[#6b7b83]">
+              Jelajahi Mongoland, Crazy House, dan spot ikonik lainnya.
+            </p>
+          </div>
+
+          <div
+            class="group flex flex-col items-center justify-center text-center rounded-2xl border border-[#eee5d9] bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+          >
+            <div
+              class="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#eaf7f4] text-[#0f766e]"
+            >
+              <Utensils class="h-5 w-5" />
+            </div>
+
+            <h4 class="text-sm font-semibold text-[#082f41]">Kuliner Lokal</h4>
+
+            <p class="mt-1 text-xs leading-5 text-[#6b7b83]">
+              Rasakan Night Market dan pengalaman outdoor BBQ.
+            </p>
+          </div>
+
+          <div
+            class="group flex flex-col items-center justify-center text-center rounded-2xl border border-[#eee5d9] bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+          >
+            <div
+              class="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#eaf7f4] text-[#0f766e]"
+            >
+              <Languages class="h-5 w-5" />
+            </div>
+
+            <h4 class="text-sm font-semibold text-[#082f41]">
+              Guide Profesional
+            </h4>
+
+            <p class="mt-1 text-xs leading-5 text-[#6b7b83]">
+              Didampingi pemandu profesional berbahasa Inggris.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- 3. Highlight Destinasi -->
-    <section id="highlights" class="py-16 px-6 max-w-6xl mx-auto scroll-mt-20">
-      <div class="max-w-xl mx-auto text-center mb-10">
-        <p class="text-xs font-bold uppercase tracking-widest text-[#ff643f]">
+
+    <!-- 3. Highlight Destinasi -->
+    <section id="highlights" class="mx-auto max-w-6xl scroll-mt-20 px-6 py-20">
+      <!-- Heading -->
+      <div class="mx-auto mb-12 max-w-2xl text-center">
+        <p class="text-xs font-bold uppercase tracking-[0.24em] text-[#ff643f]">
           Package Highlights
         </p>
+
         <h2
-          class="mt-1.5 font-serif text-2xl sm:text-3xl font-bold text-[#082f41]"
+          class="mt-3 font-serif text-3xl font-bold leading-tight text-[#082f41] sm:text-4xl"
         >
           Destinasi Pilihan Da Lat
         </h2>
-        <p class="mt-2 text-xs sm:text-sm text-[#53666f]">
-          Seluruh tiket masuk objek wisata di bawah ini telah tercakup dalam
-          program perjalanan.
+
+        <p class="mx-auto mt-4 max-w-xl text-sm leading-6 text-[#61727a]">
+          Jelajahi destinasi pilihan yang telah termasuk dalam rangkaian
+          perjalanan paket tour Da Lat.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        <div
+      <!-- Cards -->
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <article
           v-for="(hl, index) in tourPackage.highlights"
           :key="index"
-          class="bg-white rounded-2xl p-6 border border-[#e7dccd] shadow-sm flex flex-col justify-between"
+          class="group overflow-hidden rounded-2xl border border-[#e7dccd] bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
         >
-          <div>
+          <!-- Image -->
+          <div class="relative h-[210px] overflow-hidden">
+            <img
+              :src="`${imagesDestination[index % imagesDestination.length]}?auto=format&fit=crop&w=900&q=80`"
+              :alt="hl"
+              class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+
+            <!-- Dark Gradient -->
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/5 to-transparent"
+            />
+
+            <!-- Number -->
             <span
-              class="inline-block w-8 h-8 rounded-xl bg-[#fff9f0] border border-[#e7dccd] text-center leading-8 text-xs font-bold text-[#082f41] mb-3"
+              class="absolute left-4 top-4 flex h-9 w-9 items-center justify-center rounded-xl bg-white/95 text-xs font-bold text-[#082f41] shadow-sm backdrop-blur"
             >
-              0{{ index + 1 }}
+              {{ String(index + 1).padStart(2, "0") }}
             </span>
-            <p class="text-sm font-bold text-[#082f41] leading-snug">
-              {{ hl }}
-            </p>
+
+            <!-- Included Badge -->
+            <span
+              class="absolute right-4 top-4 rounded-full bg-emerald-500 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white"
+            >
+              Included
+            </span>
           </div>
-          <p
-            class="mt-4 pt-3 border-t border-gray-100 text-[11px] font-semibold text-emerald-600"
-          >
-            ✓ Tiket Masuk Termasuk
-          </p>
-        </div>
+
+          <!-- Content -->
+          <div class="p-5">
+            <h3
+              class="text-base font-bold leading-6 text-[#082f41] transition-colors duration-300 group-hover:text-[#0f766e]"
+            >
+              {{ hl }}
+            </h3>
+
+            <p class="mt-2 text-xs leading-5 text-[#6b7b83]">
+              Salah satu destinasi pilihan yang akan dikunjungi dalam perjalanan
+              Anda di Da Lat.
+            </p>
+
+            <!-- Included -->
+            <div
+              class="mt-5 flex items-center gap-2 border-t border-[#f0ebe4] pt-4"
+            >
+              <div
+                class="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-50 text-xs font-bold text-emerald-600"
+              >
+                ✓
+              </div>
+
+              <span class="text-xs font-semibold text-[#53666f]">
+                Tiket masuk sudah termasuk
+              </span>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
