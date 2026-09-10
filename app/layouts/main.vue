@@ -4,8 +4,10 @@
   >
     <Header />
 
-    <div class="flex-grow">
+    <div class="grow">
       <slot />
     </div>
+
+    <Footer />
   </div>
 </template>
