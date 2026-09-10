@@ -18,7 +18,7 @@ defineProps<{
     <NuxtLink to="/" class="flex items-center gap-3 group">
       <img 
         :src="logoImg" 
-        alt="TRIPLE CIRCLE Logo" 
+        alt="TRIP CIRCLE Logo" 
         class="h-15 md:h-20 lg:h-21 w-auto object-contain transition-transform duration-200 group-hover:scale-130"
       />
       <span class="text-xl lg:text-3xl font-black tracking-widest text-[#082f41]">
