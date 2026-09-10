@@ -9,6 +9,7 @@ export interface HotelPrice {
   stars: number
   hotelName: string
   price: number
+  image: string
 }
 
 export interface ChildPolicyItem {
@@ -53,12 +54,14 @@ export const useTours = () => {
       {
         stars: 3,
         hotelName: 'Rum Yang Hotel atau Hotel Setara',
-        price: 5864000
+        price: 5864000,
+        image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80'
       },
       {
         stars: 4,
         hotelName: 'TTC Hotel atau Hotel Setara',
-        price: 6985000
+        price: 6985000,
+        image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80'
       }
     ],
     includes: [
