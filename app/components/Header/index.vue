@@ -13,6 +13,7 @@ const navMenu = [
 
 <template>
   <header class="sticky top-0 z-50 w-full border-b border-[#e7dccd] bg-[#fff9f1]/95 backdrop-blur-sm">
+    
     <DesktopHeader :nav-menu="navMenu" />
     <MobileHeader :nav-menu="navMenu" />
   </header>
