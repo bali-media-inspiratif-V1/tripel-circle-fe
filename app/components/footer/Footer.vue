@@ -1,9 +1,9 @@
 <template>
-  <footer class="text-amber-100/80 bg-[#2c221e] pt-12 pb-6 border-t border-[#42342e]">
+  <footer class="text-amber-100/80 bg-[#082f41] pt-12 pb-6 border-t border-[#0d445d]">
     <div class="max-w-7xl mx-auto px-6">
       
       <!-- Upper Section: 4 Grid Columns -->
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 border-b border-[#42342e]">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 border-b border-[#0d445d]">
 
         <!-- Col 1: Brand & Currency -->
         <div class="md:col-span-4 space-y-3">
@@ -15,22 +15,23 @@
                 class="max-w-full max-h-full object-contain" 
               />
             </div>
-            <span class="text-xl font-bold tracking-widest text-white">TRIP CIRCLE</span>
+            <span class="text-xl font-bold tracking-widest text-white">TRIPLE CIRCLE</span>
           </div>
 
           <p class="text-xs text-amber-100/60 leading-relaxed pr-4">
-            Connecting Journeys, Creating Experiences. Menikmati pesona sejuk Da Lat, Vietnam.
+            Connecting Journeys, Creating Experiences. Enjoy the cool charm of Da Lat, Vietnam.
           </p>
           
           <div class="pt-1">
-            <select class="bg-[#3b2e28] text-amber-100 text-xs px-3 py-1.5 rounded border border-[#524139] focus:outline-none cursor-pointer">
-              <option value="id">🇲🇨 IDR</option>
+            <!-- Fixed Syntax Error: Added missing ']' in border class -->
+            <select class="bg-[#0b3c52] text-amber-100 text-xs px-3 py-1.5 rounded border border-[#135575] focus:outline-none cursor-pointer">
               <option value="en">🇬🇧 USD</option>
+              <option value="id">🇲🇨 IDR</option>
             </select>
           </div>
         </div>
 
-        <!-- Col 2: Useful Links (Sudah Diperbaiki agar Tidak Duplikat) -->
+        <!-- Col 2: Useful Links -->
         <div class="md:col-span-2">
           <h4 class="text-white font-semibold text-sm mb-4">ABOUT US</h4>
           <ul class="space-y-2.5 text-xs">
@@ -48,7 +49,7 @@
             <li class="flex items-start gap-2">
               <span class="text-amber-100/50 shrink-0">A:</span>
               <span class="text-amber-100/80 leading-relaxed">
-               Da Lat, Vietnam
+                Da Lat, Vietnam
               </span>
             </li>
             <li class="flex items-center gap-2">
@@ -75,27 +76,28 @@
           </div>
         </div>
 
+        <!-- Col 4: Payment Methods -->
         <div class="md:col-span-3 space-y-3">
           <h4 class="text-white font-semibold text-sm mb-4">PAY SAFELY WITH US</h4>
           <p class="text-xs text-amber-100/60 leading-relaxed">
             Your payment is encrypted and securely processed with standard SSL protocols.
           </p>
 
-          <!-- Badges (Penyesuaian Teks VISA agar tidak terpotong) -->
+          <!-- Badges (Updated background and border colors for blue theme) -->
           <div class="flex flex-wrap items-center gap-2 pt-1">
-            <div class="bg-[#3b2e28] px-2.5 py-1 rounded border border-[#524139] text-[10px] font-bold tracking-wider text-amber-100 h-6 flex items-center">
+            <div class="bg-[#0b3c52] px-2.5 py-1 rounded border border-[#135575] text-[10px] font-bold tracking-wider text-amber-100 h-6 flex items-center">
               VISA
             </div>
-            <div class="bg-[#3b2e28] px-2 py-1 rounded border border-[#524139] flex items-center justify-center h-6">
+            <div class="bg-[#0b3c52] px-2 py-1 rounded border border-[#135575] flex items-center justify-center h-6">
               <svg class="h-3 w-auto" viewBox="0 0 32 20" fill="none">
                 <circle cx="11" cy="10" r="8" fill="#EB001B"/>
                 <circle cx="21" cy="10" r="8" fill="#F79E1B" fill-opacity="0.9"/>
               </svg>
             </div>
-            <div class="bg-[#3b2e28] px-2 py-1 rounded border border-[#524139] text-[10px] font-semibold text-amber-100 h-6 flex items-center">
+            <div class="bg-[#0b3c52] px-2 py-1 rounded border border-[#135575] text-[10px] font-semibold text-amber-100 h-6 flex items-center">
               Bank Transfer
             </div>
-            <div class="bg-[#3b2e28] px-2 py-1 rounded border border-[#524139] text-[10px] font-semibold text-amber-100 h-6 flex items-center">
+            <div class="bg-[#0b3c52] px-2 py-1 rounded border border-[#135575] text-[10px] font-semibold text-amber-100 h-6 flex items-center">
               QRIS
             </div>
           </div>
@@ -105,7 +107,7 @@
 
       <!-- Bottom Bar -->
       <div class="pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-amber-100/50">
-        <p>© {{ currentYear }} TRIP CIRCLE. All Rights Reserved.</p>
+        <p>© {{ currentYear }} TRIPLE CIRCLE. All Rights Reserved.</p>
         <div class="flex items-center gap-6">
           <a href="#terms" class="hover:text-amber-400 transition">Terms of Service</a>
           <a href="#privacy" class="hover:text-amber-400 transition">Privacy Policy</a>

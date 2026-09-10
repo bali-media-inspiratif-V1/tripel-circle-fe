@@ -18,7 +18,7 @@ const isMenuOpen = ref(false);
   <div class="md:hidden">
     <div class="flex items-center justify-between px-5 py-4">
       <NuxtLink to="/" class="text-lg font-black tracking-widest text-[#2c221e]">
-        TRIP CIRCLE
+        TRIPLE CIRCLE
       </NuxtLink>
       
       <button 

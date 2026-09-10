@@ -13,7 +13,7 @@ defineProps<{
 <template>
   <div class="hidden md:flex items-center justify-between max-w-7xl mx-auto px-6 py-4">
     <NuxtLink to="/" class="text-xl font-black tracking-widest text-[#2c221e]">
-      TRIP CIRCLE
+      TRIPLE CIRCLE
     </NuxtLink>
 
     <nav class="flex items-center gap-7">
